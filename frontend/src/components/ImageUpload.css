@@ -1,0 +1,119 @@
+.upload-container {
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  animation: riseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.drop-zone {
+  position: relative;
+  width: 100%;
+  border: 1.5px dashed rgba(120, 160, 255, 0.28);
+  border-radius: 14px;
+  padding: 4rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  background: radial-gradient(ellipse at center, rgba(34, 211, 238, 0.04), transparent 70%);
+  overflow: hidden;
+}
+
+.drop-zone:hover,
+.drop-zone.dragging {
+  border-color: var(--color-neon);
+  background: radial-gradient(ellipse at center, rgba(34, 211, 238, 0.09), transparent 70%);
+  box-shadow: 0 0 40px rgba(34, 211, 238, 0.12), inset 0 0 40px rgba(34, 211, 238, 0.05);
+}
+
+.drop-zone h2 {
+  margin: 1.1rem 0 0.4rem;
+  color: #fff;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.drop-zone p {
+  color: var(--color-text-muted);
+  margin-bottom: 0.25rem;
+  position: relative;
+}
+
+.mt-4 {
+  margin-top: 1.4rem;
+  position: relative;
+}
+
+/* Icon + pulse rings */
+.upload-icon-wrap {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-icon {
+  font-size: 3rem;
+  filter: drop-shadow(0 0 14px rgba(255, 176, 32, 0.5));
+  animation: floaty 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+.pulse-ring {
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid rgba(34, 211, 238, 0.55);
+  border-radius: 50%;
+  animation: pulseRing 2.6s ease-out infinite;
+}
+
+.ring-b {
+  animation-delay: 1.3s;
+  border-color: rgba(255, 176, 32, 0.5);
+}
+
+/* Floating cuneiform backdrop */
+.glyph-field {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.float-glyph {
+  position: absolute;
+  font-size: 1.6rem;
+  color: rgba(167, 139, 250, 0.25);
+  animation: floaty 6s ease-in-out infinite;
+}
+
+.fg-1 { top: 14%; left: 8%; animation-delay: 0s; }
+.fg-2 { top: 22%; right: 10%; color: rgba(34, 211, 238, 0.25); animation-delay: 1.2s; }
+.fg-3 { bottom: 18%; left: 14%; color: rgba(255, 176, 32, 0.28); animation-delay: 2.1s; }
+.fg-4 { bottom: 14%; right: 12%; animation-delay: 3s; }
+
+/* Mini workflow steps inside drop zone */
+.upload-mini-steps {
+  margin-top: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.72rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  position: relative;
+}
+
+.ms-arrow {
+  color: var(--color-neon);
+}
